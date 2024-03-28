@@ -11,9 +11,9 @@ public class OperationService {
     public OperationService(){
         List<Operation> operation;
         operation = new ArrayList<>();
-        operation.add(new Operation( naznach: "оплата 1"));
-        operation.add(new Operation( naznach: "оплата 2"));
-        operation.add(new Operation( naznach: "оплата 3"));
+        operation.add(new Operation("оплата 1"));
+        operation.add(new Operation("оплата 2"));
+        operation.add(new Operation("оплата 3"));
     }
 
         public List<Operation> getOperation(){
