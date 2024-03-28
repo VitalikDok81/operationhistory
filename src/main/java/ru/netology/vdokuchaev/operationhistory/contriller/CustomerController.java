@@ -23,7 +23,7 @@ public class CustomerController {
         return service.getCustomer(id);
     }
     @PostMapping
-    public void createCustomer (@ResponseBody Customer customer) {
+    public void createCustomer (@RequestBody Customer customer) {
         service.createCustomer(customer);
     }
 

@@ -8,12 +8,13 @@ import java.util.List;
 @Service
 public class CustomerService {
 
+    List<Customer> customers;
+
     public CustomerService(){
-        List<Customer> customers;
         customers = new ArrayList<>();
-        customers.add(new Customer( name: "Клиент 1"));
-        customers.add(new Customer( name: "Клиент 2"));
-        customers.add(new Customer( name: "Клиент 3"));
+        customers.add(new Customer("Клиент 1"));
+        customers.add(new Customer("Клиент 2"));
+        customers.add(new Customer("Клиент 3"));
     }
 
     public List<Customer> getCustomer(){
@@ -25,4 +26,6 @@ public class CustomerService {
     }
 
 
+    public void createCustomer(Customer customer) {
+    }
 }

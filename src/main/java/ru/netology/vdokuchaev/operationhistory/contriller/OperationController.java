@@ -1,9 +1,6 @@
 package ru.netology.vdokuchaev.operationhistory.contriller;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ru.netology.vdokuchaev.operationhistory.domain.Customer;
 import ru.netology.vdokuchaev.operationhistory.domain.Operation;
 import ru.netology.vdokuchaev.operationhistory.service.AsyncIntupOperationService;
@@ -19,7 +16,7 @@ public class OperationController {
         this.service = service;
     }
     @PostMapping
-    public void createOperation (@ResponseBody Operation operation) {
+    public void createOperation (@RequestBody Operation operation) {
         service.addOperation(operation);
     }
 
