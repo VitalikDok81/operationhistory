@@ -26,4 +26,6 @@ public class OperationService {
             return operation.get(id);
         }
 
+    public void saveOperation(Operation operation) {
     }
+}
