@@ -22,7 +22,7 @@ public class OperationService {
             return operation;
         }
 
-        public Customer getOperation(int id){
+        public Operation getOperation(int id){
             return operation.get(id);
         }
 
