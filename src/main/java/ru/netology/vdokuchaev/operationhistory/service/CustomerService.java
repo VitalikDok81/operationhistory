@@ -8,8 +8,9 @@ import java.util.List;
 @Service
 public class CustomerService {
 
+    List<Customer> customers;
+
     public CustomerService(){
-        List<Customer> customers;
         customers = new ArrayList<>();
         customers.add(new Customer("Клиент 1"));
         customers.add(new Customer("Клиент 2"));

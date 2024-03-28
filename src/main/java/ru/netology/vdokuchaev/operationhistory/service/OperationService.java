@@ -8,8 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 @Service
 public class OperationService {
+
+    List<Operation> operation;
+
     public OperationService(){
-        List<Operation> operation;
         operation = new ArrayList<>();
         operation.add(new Operation("оплата 1"));
         operation.add(new Operation("оплата 2"));
