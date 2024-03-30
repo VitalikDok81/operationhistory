@@ -27,6 +27,4 @@ public class CustomerController {
         customerService.createCustomer(customer);
     }
 
-
-
 }

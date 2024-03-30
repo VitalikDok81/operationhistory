@@ -19,5 +19,4 @@ public class OperationController {
     public void createOperation (@RequestBody Operation operation) {
         service.addOperation(operation);
     }
-
 }

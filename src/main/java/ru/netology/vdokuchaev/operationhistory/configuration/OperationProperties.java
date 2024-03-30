@@ -11,5 +11,4 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix= "operation.processing")
 public class OperationProperties {
     public int sleepMilliSeconds;
-
    }

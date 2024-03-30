@@ -29,7 +29,6 @@ public class AsyncIntupOperationService {
         Thread t = new Thread(this::processQueue);
         t.start();
     }
-
     private void processQueue() {
         while (true) {
             Operation operation = operations.poll();

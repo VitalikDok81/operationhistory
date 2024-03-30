@@ -19,12 +19,10 @@ public class CustomerService {
     public List<Customer> getCustomer(){
         return customers;
     }
-
     public Customer getCustomer(int id){
         return customers.get(id);
     }
     public void createCustomer(Customer customer){
-
     }
 
 }

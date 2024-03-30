@@ -20,7 +20,6 @@ public class OperationService {
     public List<Operation> getOperation(){
             return operation;
         }
-
     public Operation getOperation(int id){
             return operation.get(id);
         }
