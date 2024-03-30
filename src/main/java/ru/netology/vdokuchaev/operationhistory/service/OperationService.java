@@ -8,20 +8,24 @@ import java.util.ArrayList;
 import java.util.List;
 @Service
 public class OperationService {
+    List<Operation> operation;
+
     public OperationService(){
-        List<Operation> operation;
         operation = new ArrayList<>();
-        operation.add(new Operation( naznach: "оплата 1"));
-        operation.add(new Operation( naznach: "оплата 2"));
-        operation.add(new Operation( naznach: "оплата 3"));
+        operation.add(new Operation( "оплата 1"));
+        operation.add(new Operation( "оплата 2"));
+        operation.add(new Operation( "оплата 3"));
     }
 
-        public List<Operation> getOperation(){
+    public List<Operation> getOperation(){
             return operation;
         }
 
-        public Customer getOperation(int id){
+    public Operation getOperation(int id){
             return operation.get(id);
         }
+    public void saveOperation(Operation operation){
 
     }
+
+}

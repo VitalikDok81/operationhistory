@@ -7,25 +7,26 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "api/customers")
 public class CustomerController {
-    public final CustomerService service;
+    private final CustomerService customerService;
 
     public CustomerController(CustomerService service){
-        this.service = service;
+        this.customerService = service;
     }
 
     @GetMapping
     public List<Customer> getCustomer(){
-        return  service.getCustomer();
+        return  customerService.getCustomer();
     }
 
     @GetMapping ("{id}")
     public Customer getCustomer(@PathVariable("id") int id) {
-        return service.getCustomer(id);
+        return customerService.getCustomer(id);
     }
     @PostMapping
-    public void createCustomer (@ResponseBody Customer customer) {
-        service.createCustomer(customer);
+    public void createCustomer (@RequestBody Customer customer) {
+        customerService.createCustomer(customer);
     }
+
 
 
 }

@@ -3,6 +3,7 @@ package ru.netology.vdokuchaev.operationhistory.service;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ru.netology.vdokuchaev.operationhistory.configuration.OperationProperties;
 import ru.netology.vdokuchaev.operationhistory.domain.Operation;
 
 import java.util.LinkedList;
@@ -15,6 +16,9 @@ public class AsyncIntupOperationService {
 
     @Autowired
     private OperationService operationService;
+
+    @Autowired
+    private OperationProperties operationProperties;
 
     @PostConstruct
     public void init() {
@@ -32,7 +36,7 @@ public class AsyncIntupOperationService {
             if (operation == null) {
                 try {
                     System.out.println("No operations");
-                    Thread.sleep(1000);
+                    Thread.sleep(operationProperties.getSleepMilliSeconds());
                 } catch (InterruptedException e) {
                     System.out.println(e);
                 }
